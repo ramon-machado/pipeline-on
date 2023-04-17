@@ -27,15 +27,26 @@ jobs:
     - run: npm install react-dom
     - run: npm install --save gh-pages
     - run: npm install react-scripts
-    - run: npm run build
-    - name: Deploy
+    
+    - name: Set up Git user
       run: |
        git config --global user.name $user_name
        git config --global user.email $user_email
-       git remote set-url origin https://${github_token}@github.com/${repository}
-       npm run deploy
-      env:
+    
+    - name: Build
+      run: npm run build
+    
+    - name: Deploy to Github Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        publish_dir: ./build
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
-        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-        repository: ${{ github.repository }}
+          
+    #- name: Deploy
+    #   git remote set-url origin https://${github_token}@github.com/${repository}
+    #   npm run deploy
+    #  env:
+    #    github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+    #    repository: ${{ github.repository }}
