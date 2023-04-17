@@ -27,4 +27,4 @@ jobs:
     - run: npm install react-dom
     - run: npm install react-scripts
     - run: npm run build
-    - run: npm start
+    - run: npm deploy
