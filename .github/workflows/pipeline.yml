@@ -42,6 +42,9 @@ jobs:
     - name: Build
       run: npm run build
     
+  Deploy: 
+    runs-on: ubuntu-latest    
+    steps:
     - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -49,10 +52,4 @@ jobs:
         publish_dir: ./build
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
-          
-    #- name: Deploy
-    #   git remote set-url origin https://${github_token}@github.com/${repository}
-    #   npm run deploy
-    #  env:
-    #    github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-    #    repository: ${{ github.repository }}
+
