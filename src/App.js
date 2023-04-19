@@ -12,7 +12,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to FIAP 21AGL"</h1>
         </header>
         <p className="App-intro">
-          Minha Feature Devops
+          Minha Feature Prof
         </p>
       </div>
     );
