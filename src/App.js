@@ -14,9 +14,10 @@ class App extends Component {
         </header>
         <p className="App-intro">
           O lado negro da força!!
+         </p>
+        
+        <p> Essa é a nossa branch!!!"</p>
 
-          <h1 className="App-title">Essa é a nossa branch!!!"</h1>
-        </header>
         <p className="App-intro">
           Minha Feature Prof
 
