@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
-import mba from './MBA.png';
+import mba from './OctoCat.jpg';
 import './App.css';
 
 class App extends Component {
@@ -9,10 +9,17 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={mba} className="App-logo" alt="logo" />
+
+          <h1 className="App-title"><b>OCTOCATJEDI 2023!!!!!!!!!!!!!!"</b></h1>
+        </header>
+        <p className="App-intro">
+          O lado negro da força!!
+
           <h1 className="App-title">Essa é a nossa branch!!!"</h1>
         </header>
         <p className="App-intro">
           Minha Feature Prof
+
         </p>
       </div>
     );
