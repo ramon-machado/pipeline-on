@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "rafaellross" ]
   pull_request:
-    branches: [ "rafaellross" ]
+    branches: [ "release-plom" ]
 
 jobs:
   build:
